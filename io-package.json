@@ -121,6 +121,12 @@
       "native": {}
     },
     {
+      "_id": "query",
+      "type": "channel",
+      "common": { "name": "Query" },
+      "native": {}
+    },
+    {
       "_id": "query.send",
       "type": "state",
       "common": {
@@ -157,6 +163,12 @@
         "write": false,
         "def": ""
       },
+      "native": {}
+    },
+    {
+      "_id": "events",
+      "type": "channel",
+      "common": { "name": "Events" },
       "native": {}
     },
     {
