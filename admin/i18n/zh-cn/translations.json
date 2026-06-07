@@ -5,5 +5,6 @@
   "cctvql_protocol": "协议",
   "cctvql_apikey": "API 密钥（可选）",
   "cctvql_apikey_help": "如果禁用了身份验证，请留空",
-  "cctvql_polling": "事件轮询间隔（秒）"
+  "cctvql_polling": "事件轮询间隔（秒）",
+  "localhost": "localhost"
 }

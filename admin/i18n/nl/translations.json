@@ -5,5 +5,6 @@
   "cctvql_protocol": "Protocol",
   "cctvql_apikey": "API-sleutel (optioneel)",
   "cctvql_apikey_help": "Laat leeg als authenticatie is uitgeschakeld",
-  "cctvql_polling": "Gebeurtenis polling-interval (seconden)"
+  "cctvql_polling": "Gebeurtenis polling-interval (seconden)",
+  "localhost": "localhost"
 }
