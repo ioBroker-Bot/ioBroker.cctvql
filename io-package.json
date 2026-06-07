@@ -1,7 +1,7 @@
 {
   "common": {
     "name": "cctvql",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "titleLang": {
       "en": "cctvQL",
       "de": "cctvQL",
@@ -49,6 +49,19 @@
     "globalDependencies": [{ "admin": ">=7.6.20" }],
     "adminUI": { "config": "json" },
     "news": {
+      "1.0.2": {
+        "en": "Fix checker errors: update release-script packages, require Node.js 24, fix i18n placeholder key",
+        "de": "Checker-Fehler behoben: Release-Script-Pakete aktualisiert, Node.js 24 erforderlich, i18n-Platzhalter-Schlüssel korrigiert",
+        "ru": "Исправление ошибок проверки: обновлены пакеты release-script, требуется Node.js 24, исправлен ключ плейсхолдера i18n",
+        "pt": "Corrigir erros do verificador: atualizar pacotes release-script, exigir Node.js 24, corrigir chave de placeholder i18n",
+        "nl": "Checker-fouten hersteld: release-script-pakketten bijgewerkt, Node.js 24 vereist, i18n-plaatshoudersleutel gecorrigeerd",
+        "fr": "Correction des erreurs du vérificateur : mise à jour des paquets release-script, Node.js 24 requis, correction de la clé d'espace réservé i18n",
+        "it": "Correzione errori checker: aggiornati pacchetti release-script, richiesto Node.js 24, corretta chiave placeholder i18n",
+        "es": "Corregir errores del verificador: actualizar paquetes release-script, requerir Node.js 24, corregir clave de marcador de posición i18n",
+        "pl": "Poprawka błędów sprawdzarki: aktualizacja pakietów release-script, wymagany Node.js 24, poprawka klucza symbolu zastępczego i18n",
+        "uk": "Виправлення помилок перевірки: оновлення пакетів release-script, вимога Node.js 24, виправлення ключа заповнювача i18n",
+        "zh-cn": "修复检查器错误：更新 release-script 包，要求 Node.js 24，修复 i18n 占位符键"
+      },
       "1.0.1": {
         "en": "Maintenance release — add bluefox as npm collaborator",
         "de": "Wartungsversion — bluefox als npm-Mitarbeiter hinzufügen",

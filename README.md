@@ -73,8 +73,10 @@ on({ id: 'cctvql.0.query.answer', change: 'any' }, (obj) => {
 
 ## Changelog
 
-### **WORK IN PROGRESS**
-- (copilot) Adapter requires node.js >= 22 now
+### 1.0.2 (2026-06-07)
+* Update @alcalzone/release-script* to 5.2.x (checker E0036)
+* Require Node.js >= 24; update CI deploy job to node 24 (checker E3022)
+* Add i18n key for `placeholder` in jsonConfig host field (checker E5612)
 
 ### 1.0.1 (2026-04-27)
 * Add bluefox as npm collaborator
