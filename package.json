@@ -32,7 +32,7 @@
     "io-package.json"
   ],
   "engines": {
-    "node": ">=24.0.0"
+    "node": ">=20"
   },
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/.bin/jest --passWithNoTests",
@@ -42,7 +42,7 @@
     "release": "release-script"
   },
   "dependencies": {
-    "@iobroker/adapter-core": "^3.3.2",
+    "@iobroker/adapter-core": "^3.4.1",
     "axios": "^1.6.0"
   },
   "devDependencies": {
