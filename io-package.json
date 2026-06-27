@@ -1,201 +1,244 @@
 {
-  "common": {
-    "name": "cctvql",
-    "version": "1.0.2",
-    "titleLang": {
-      "en": "cctvQL",
-      "de": "cctvQL",
-      "ru": "cctvQL",
-      "pt": "cctvQL",
-      "nl": "cctvQL",
-      "fr": "cctvQL",
-      "it": "cctvQL",
-      "es": "cctvQL",
-      "pl": "cctvQL",
-      "uk": "cctvQL",
-      "zh-cn": "cctvQL"
+    "common": {
+        "name": "cctvql",
+        "version": "1.0.3",
+        "titleLang": {
+            "en": "cctvQL",
+            "de": "cctvQL",
+            "ru": "cctvQL",
+            "pt": "cctvQL",
+            "nl": "cctvQL",
+            "fr": "cctvQL",
+            "it": "cctvQL",
+            "es": "cctvQL",
+            "pl": "cctvQL",
+            "uk": "cctvQL",
+            "zh-cn": "cctvQL"
+        },
+        "desc": {
+            "en": "Natural-language CCTV queries, live events, and PTZ control across Frigate, Hikvision, Synology, Dahua, and more.",
+            "de": "Natürlichsprachliche CCTV-Abfragen, Live-Ereignisse und PTZ-Steuerung für Frigate, Hikvision, Synology, Dahua u.v.m.",
+            "ru": "Запросы к CCTV на естественном языке, живые события и управление PTZ для Frigate, Hikvision, Synology, Dahua и других.",
+            "pt": "Consultas CCTV em linguagem natural, eventos ao vivo e controlo PTZ para Frigate, Hikvision, Synology, Dahua e outros.",
+            "nl": "Natuurlijke taal CCTV-zoekopdrachten, live gebeurtenissen en PTZ-bediening voor Frigate, Hikvision, Synology, Dahua en meer.",
+            "fr": "Requêtes CCTV en langage naturel, événements en direct et contrôle PTZ pour Frigate, Hikvision, Synology, Dahua et plus.",
+            "it": "Query CCTV in linguaggio naturale, eventi live e controllo PTZ per Frigate, Hikvision, Synology, Dahua e altri.",
+            "es": "Consultas CCTV en lenguaje natural, eventos en vivo y control PTZ para Frigate, Hikvision, Synology, Dahua y más.",
+            "pl": "Zapytania CCTV w języku naturalnym, zdarzenia na żywo i sterowanie PTZ dla Frigate, Hikvision, Synology, Dahua i innych.",
+            "uk": "Запити до CCTV природною мовою, живі події та керування PTZ для Frigate, Hikvision, Synology, Dahua тощо.",
+            "zh-cn": "针对 Frigate、Hikvision、Synology、Dahua 等的自然语言 CCTV 查询、实时事件和 PTZ 控制。"
+        },
+        "authors": [
+            "arunrajiah <arunrajiah@gmail.com>"
+        ],
+        "keywords": [
+            "cctv",
+            "camera",
+            "nvr",
+            "frigate",
+            "hikvision",
+            "nlp",
+            "surveillance"
+        ],
+        "licenseInformation": {
+            "license": "MIT",
+            "type": "free"
+        },
+        "platform": "Javascript/Node.js",
+        "mode": "daemon",
+        "type": "multimedia",
+        "tier": 3,
+        "compact": false,
+        "icon": "cctvql.png",
+        "extIcon": "https://raw.githubusercontent.com/arunrajiah/ioBroker.cctvql/main/admin/cctvql.png",
+        "readme": "https://github.com/arunrajiah/ioBroker.cctvql/blob/main/README.md",
+        "loglevel": "info",
+        "connectionType": "local",
+        "dataSource": "push",
+        "dependencies": [
+            {
+                "js-controller": ">=6.0.11"
+            }
+        ],
+        "globalDependencies": [
+            {
+                "admin": ">=7.6.20"
+            }
+        ],
+        "adminUI": {
+            "config": "json"
+        },
+        "news": {
+            "1.0.3": {
+                "en": "Fix: self-rescheduling poll loop, clamp interval in code, remove unimplemented PTZ states, require Node.js 22",
+                "de": "Fix: selbst-neuplanende Poll-Schleife, Intervall im Code begrenzen, nicht implementierte PTZ-Zustände entfernen, Node.js 22 erforderlich",
+                "ru": "Исправление: самостоятельно перепланируемый цикл опроса, ограничение интервала в коде, удаление нереализованных PTZ-состояний, требуется Node.js 22",
+                "pt": "Correção: loop de sondagem com reagendamento próprio, limitar intervalo no código, remover estados PTZ não implementados, requer Node.js 22",
+                "nl": "Fix: zelf-herplannen poll-lus, interval in code beperken, niet-geïmplementeerde PTZ-toestanden verwijderen, Node.js 22 vereist",
+                "fr": "Correction : boucle de sondage auto-reprogrammée, limitation de l'intervalle dans le code, suppression des états PTZ non implémentés, Node.js 22 requis",
+                "it": "Fix: ciclo di polling auto-ripianificante, limitare l'intervallo nel codice, rimuovere stati PTZ non implementati, richiesto Node.js 22",
+                "es": "Fix: bucle de sondeo con reprogramación propia, limitar intervalo en código, eliminar estados PTZ no implementados, se requiere Node.js 22",
+                "pl": "Poprawka: pętla odpytywania z samoplanowaniem, ograniczenie interwału w kodzie, usunięcie niezaimplementowanych stanów PTZ, wymagany Node.js 22",
+                "uk": "Виправлення: цикл опитування з самоперепланування, обмеження інтервалу в коді, видалення нереалізованих PTZ-станів, вимагається Node.js 22",
+                "zh-cn": "修复：自重调度轮询循环，在代码中限制间隔，移除未实现的PTZ状态，需要Node.js 22"
+            },
+            "1.0.2": {
+                "en": "Fix checker errors: update release-script packages, require Node.js 24, fix i18n placeholder key",
+                "de": "Checker-Fehler behoben: Release-Script-Pakete aktualisiert, Node.js 24 erforderlich, i18n-Platzhalter-Schlüssel korrigiert",
+                "ru": "Исправление ошибок проверки: обновлены пакеты release-script, требуется Node.js 24, исправлен ключ плейсхолдера i18n",
+                "pt": "Corrigir erros do verificador: atualizar pacotes release-script, exigir Node.js 24, corrigir chave de placeholder i18n",
+                "nl": "Checker-fouten hersteld: release-script-pakketten bijgewerkt, Node.js 24 vereist, i18n-plaatshoudersleutel gecorrigeerd",
+                "fr": "Correction des erreurs du vérificateur : mise à jour des paquets release-script, Node.js 24 requis, correction de la clé d'espace réservé i18n",
+                "it": "Correzione errori checker: aggiornati pacchetti release-script, richiesto Node.js 24, corretta chiave placeholder i18n",
+                "es": "Corregir errores del verificador: actualizar paquetes release-script, requerir Node.js 24, corregir clave de marcador de posición i18n",
+                "pl": "Poprawka błędów sprawdzarki: aktualizacja pakietów release-script, wymagany Node.js 24, poprawka klucza symbolu zastępczego i18n",
+                "uk": "Виправлення помилок перевірки: оновлення пакетів release-script, вимога Node.js 24, виправлення ключа заповнювача i18n",
+                "zh-cn": "修复检查器错误：更新 release-script 包，要求 Node.js 24，修复 i18n 占位符键"
+            },
+            "1.0.1": {
+                "en": "Maintenance release — add bluefox as npm collaborator",
+                "de": "Wartungsversion — bluefox als npm-Mitarbeiter hinzufügen",
+                "ru": "Техническое обновление — добавление bluefox как npm-соавтора",
+                "pt": "Versão de manutenção — adicionar bluefox como colaborador npm",
+                "nl": "Onderhoudsrelease — bluefox toevoegen als npm-medewerker",
+                "fr": "Version de maintenance — ajout de bluefox comme collaborateur npm",
+                "it": "Versione di manutenzione — aggiunta di bluefox come collaboratore npm",
+                "es": "Versión de mantenimiento — agregar bluefox como colaborador npm",
+                "pl": "Wydanie serwisowe — dodanie bluefox jako współpracownika npm",
+                "uk": "Технічне оновлення — додавання bluefox як npm-співавтора",
+                "zh-cn": "维护版本 — 将 bluefox 添加为 npm 协作者"
+            },
+            "1.0.0": {
+                "en": "Initial release — natural-language queries, event polling, PTZ control",
+                "de": "Erstveröffentlichung — natürlichsprachliche Abfragen, Event-Polling, PTZ-Steuerung",
+                "ru": "Первый выпуск — запросы на естественном языке, опрос событий, управление PTZ",
+                "pt": "Lançamento inicial — consultas em linguagem natural, polling de eventos, controlo PTZ",
+                "nl": "Eerste release — zoekopdrachten in natuurlijke taal, event-polling, PTZ-bediening",
+                "fr": "Version initiale — requêtes en langage naturel, interrogation d'événements, contrôle PTZ",
+                "it": "Prima versione — query in linguaggio naturale, polling eventi, controllo PTZ",
+                "es": "Versión inicial — consultas en lenguaje natural, sondeo de eventos, control PTZ",
+                "pl": "Pierwsze wydanie — zapytania w języku naturalnym, odpytywanie zdarzeń, sterowanie PTZ",
+                "uk": "Перший випуск — запити природною мовою, опитування подій, керування PTZ",
+                "zh-cn": "初始版本 — 自然语言查询、事件轮询、PTZ 控制"
+            }
+        }
     },
-    "desc": {
-      "en": "Natural-language CCTV queries, live events, and PTZ control across Frigate, Hikvision, Synology, Dahua, and more.",
-      "de": "Natürlichsprachliche CCTV-Abfragen, Live-Ereignisse und PTZ-Steuerung für Frigate, Hikvision, Synology, Dahua u.v.m.",
-      "ru": "Запросы к CCTV на естественном языке, живые события и управление PTZ для Frigate, Hikvision, Synology, Dahua и других.",
-      "pt": "Consultas CCTV em linguagem natural, eventos ao vivo e controlo PTZ para Frigate, Hikvision, Synology, Dahua e outros.",
-      "nl": "Natuurlijke taal CCTV-zoekopdrachten, live gebeurtenissen en PTZ-bediening voor Frigate, Hikvision, Synology, Dahua en meer.",
-      "fr": "Requêtes CCTV en langage naturel, événements en direct et contrôle PTZ pour Frigate, Hikvision, Synology, Dahua et plus.",
-      "it": "Query CCTV in linguaggio naturale, eventi live e controllo PTZ per Frigate, Hikvision, Synology, Dahua e altri.",
-      "es": "Consultas CCTV en lenguaje natural, eventos en vivo y control PTZ para Frigate, Hikvision, Synology, Dahua y más.",
-      "pl": "Zapytania CCTV w języku naturalnym, zdarzenia na żywo i sterowanie PTZ dla Frigate, Hikvision, Synology, Dahua i innych.",
-      "uk": "Запити до CCTV природною мовою, живі події та керування PTZ для Frigate, Hikvision, Synology, Dahua тощо.",
-      "zh-cn": "针对 Frigate、Hikvision、Synology、Dahua 等的自然语言 CCTV 查询、实时事件和 PTZ 控制。"
+    "native": {
+        "host": "localhost",
+        "port": 8000,
+        "protocol": "http",
+        "apiKey": "",
+        "pollingInterval": 30
     },
-    "authors": ["arunrajiah <arunrajiah@gmail.com>"],
-    "keywords": ["cctv", "camera", "nvr", "frigate", "hikvision", "nlp", "surveillance"],
-    "licenseInformation": {
-      "license": "MIT",
-      "type": "free"
-    },
-    "platform": "Javascript/Node.js",
-    "mode": "daemon",
-    "type": "multimedia",
-    "tier": 3,
-    "compact": false,
-    "icon": "cctvql.png",
-    "extIcon": "https://raw.githubusercontent.com/arunrajiah/ioBroker.cctvql/main/admin/cctvql.png",
-    "readme": "https://github.com/arunrajiah/ioBroker.cctvql/blob/main/README.md",
-    "loglevel": "info",
-    "connectionType": "local",
-    "dataSource": "push",
-    "dependencies": [{ "js-controller": ">=6.0.11" }],
-    "globalDependencies": [{ "admin": ">=7.6.20" }],
-    "adminUI": { "config": "json" },
-    "news": {
-      "1.0.2": {
-        "en": "Fix checker errors: update release-script packages, require Node.js 24, fix i18n placeholder key",
-        "de": "Checker-Fehler behoben: Release-Script-Pakete aktualisiert, Node.js 24 erforderlich, i18n-Platzhalter-Schlüssel korrigiert",
-        "ru": "Исправление ошибок проверки: обновлены пакеты release-script, требуется Node.js 24, исправлен ключ плейсхолдера i18n",
-        "pt": "Corrigir erros do verificador: atualizar pacotes release-script, exigir Node.js 24, corrigir chave de placeholder i18n",
-        "nl": "Checker-fouten hersteld: release-script-pakketten bijgewerkt, Node.js 24 vereist, i18n-plaatshoudersleutel gecorrigeerd",
-        "fr": "Correction des erreurs du vérificateur : mise à jour des paquets release-script, Node.js 24 requis, correction de la clé d'espace réservé i18n",
-        "it": "Correzione errori checker: aggiornati pacchetti release-script, richiesto Node.js 24, corretta chiave placeholder i18n",
-        "es": "Corregir errores del verificador: actualizar paquetes release-script, requerir Node.js 24, corregir clave de marcador de posición i18n",
-        "pl": "Poprawka błędów sprawdzarki: aktualizacja pakietów release-script, wymagany Node.js 24, poprawka klucza symbolu zastępczego i18n",
-        "uk": "Виправлення помилок перевірки: оновлення пакетів release-script, вимога Node.js 24, виправлення ключа заповнювача i18n",
-        "zh-cn": "修复检查器错误：更新 release-script 包，要求 Node.js 24，修复 i18n 占位符键"
-      },
-      "1.0.1": {
-        "en": "Maintenance release — add bluefox as npm collaborator",
-        "de": "Wartungsversion — bluefox als npm-Mitarbeiter hinzufügen",
-        "ru": "Техническое обновление — добавление bluefox как npm-соавтора",
-        "pt": "Versão de manutenção — adicionar bluefox como colaborador npm",
-        "nl": "Onderhoudsrelease — bluefox toevoegen als npm-medewerker",
-        "fr": "Version de maintenance — ajout de bluefox comme collaborateur npm",
-        "it": "Versione di manutenzione — aggiunta di bluefox come collaboratore npm",
-        "es": "Versión de mantenimiento — agregar bluefox como colaborador npm",
-        "pl": "Wydanie serwisowe — dodanie bluefox jako współpracownika npm",
-        "uk": "Технічне оновлення — додавання bluefox як npm-співавтора",
-        "zh-cn": "维护版本 — 将 bluefox 添加为 npm 协作者"
-      },
-      "1.0.0": {
-        "en": "Initial release — natural-language queries, event polling, PTZ control",
-        "de": "Erstveröffentlichung — natürlichsprachliche Abfragen, Event-Polling, PTZ-Steuerung",
-        "ru": "Первый выпуск — запросы на естественном языке, опрос событий, управление PTZ",
-        "pt": "Lançamento inicial — consultas em linguagem natural, polling de eventos, controlo PTZ",
-        "nl": "Eerste release — zoekopdrachten in natuurlijke taal, event-polling, PTZ-bediening",
-        "fr": "Version initiale — requêtes en langage naturel, interrogation d'événements, contrôle PTZ",
-        "it": "Prima versione — query in linguaggio naturale, polling eventi, controllo PTZ",
-        "es": "Versión inicial — consultas en lenguaje natural, sondeo de eventos, control PTZ",
-        "pl": "Pierwsze wydanie — zapytania w języku naturalnym, odpytywanie zdarzeń, sterowanie PTZ",
-        "uk": "Перший випуск — запити природною мовою, опитування подій, керування PTZ",
-        "zh-cn": "初始版本 — 自然语言查询、事件轮询、PTZ 控制"
-      }
-    }
-  },
-  "native": {
-    "host": "localhost",
-    "port": 8000,
-    "protocol": "http",
-    "apiKey": "",
-    "pollingInterval": 30
-  },
-  "protectedNative": ["apiKey"],
-  "encryptedNative": ["apiKey"],
-  "objects": [],
-  "instanceObjects": [
-    {
-      "_id": "info",
-      "type": "channel",
-      "common": { "name": "Information" },
-      "native": {}
-    },
-    {
-      "_id": "info.connection",
-      "type": "state",
-      "common": {
-        "name": "Connection status",
-        "type": "boolean",
-        "role": "indicator.connected",
-        "read": true,
-        "write": false,
-        "def": false
-      },
-      "native": {}
-    },
-    {
-      "_id": "query",
-      "type": "channel",
-      "common": { "name": "Query" },
-      "native": {}
-    },
-    {
-      "_id": "query.send",
-      "type": "state",
-      "common": {
-        "name": "Send a natural-language query",
-        "type": "string",
-        "role": "text",
-        "read": true,
-        "write": true,
-        "def": ""
-      },
-      "native": {}
-    },
-    {
-      "_id": "query.answer",
-      "type": "state",
-      "common": {
-        "name": "Answer from cctvQL",
-        "type": "string",
-        "role": "text",
-        "read": true,
-        "write": false,
-        "def": ""
-      },
-      "native": {}
-    },
-    {
-      "_id": "query.intent",
-      "type": "state",
-      "common": {
-        "name": "Detected intent",
-        "type": "string",
-        "role": "text",
-        "read": true,
-        "write": false,
-        "def": ""
-      },
-      "native": {}
-    },
-    {
-      "_id": "events",
-      "type": "channel",
-      "common": { "name": "Events" },
-      "native": {}
-    },
-    {
-      "_id": "events.latest",
-      "type": "state",
-      "common": {
-        "name": "Latest detection events (JSON)",
-        "type": "string",
-        "role": "json",
-        "read": true,
-        "write": false,
-        "def": "[]"
-      },
-      "native": {}
-    },
-    {
-      "_id": "events.count",
-      "type": "state",
-      "common": {
-        "name": "Number of recent events",
-        "type": "number",
-        "role": "value",
-        "read": true,
-        "write": false,
-        "def": 0
-      },
-      "native": {}
-    }
-  ]
+    "protectedNative": [
+        "apiKey"
+    ],
+    "encryptedNative": [
+        "apiKey"
+    ],
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "name": "Connection status",
+                "type": "boolean",
+                "role": "indicator.connected",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        },
+        {
+            "_id": "query",
+            "type": "channel",
+            "common": {
+                "name": "Query"
+            },
+            "native": {}
+        },
+        {
+            "_id": "query.send",
+            "type": "state",
+            "common": {
+                "name": "Send a natural-language query",
+                "type": "string",
+                "role": "text",
+                "read": true,
+                "write": true,
+                "def": ""
+            },
+            "native": {}
+        },
+        {
+            "_id": "query.answer",
+            "type": "state",
+            "common": {
+                "name": "Answer from cctvQL",
+                "type": "string",
+                "role": "text",
+                "read": true,
+                "write": false,
+                "def": ""
+            },
+            "native": {}
+        },
+        {
+            "_id": "query.intent",
+            "type": "state",
+            "common": {
+                "name": "Detected intent",
+                "type": "string",
+                "role": "text",
+                "read": true,
+                "write": false,
+                "def": ""
+            },
+            "native": {}
+        },
+        {
+            "_id": "events",
+            "type": "channel",
+            "common": {
+                "name": "Events"
+            },
+            "native": {}
+        },
+        {
+            "_id": "events.latest",
+            "type": "state",
+            "common": {
+                "name": "Latest detection events (JSON)",
+                "type": "string",
+                "role": "json",
+                "read": true,
+                "write": false,
+                "def": "[]"
+            },
+            "native": {}
+        },
+        {
+            "_id": "events.count",
+            "type": "state",
+            "common": {
+                "name": "Number of recent events",
+                "type": "number",
+                "role": "value",
+                "read": true,
+                "write": false,
+                "def": 0
+            },
+            "native": {}
+        }
+    ]
 }
