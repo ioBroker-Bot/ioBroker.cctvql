@@ -7,6 +7,7 @@ class Cctvql extends utils.Adapter {
     constructor(options) {
         super({ ...options, name: 'cctvql' });
         this.pollTimer = null;
+        this._pollInterval = 30000;
         this.on('ready', this.onReady.bind(this));
         this.on('stateChange', this.onStateChange.bind(this));
         this.on('unload', this.onUnload.bind(this));
@@ -43,8 +44,11 @@ class Cctvql extends utils.Adapter {
             this.log.warn(`cctvQL not reachable at ${this.baseUrl}`);
         }
 
-        const interval = (this.config.pollingInterval || 30) * 1000;
-        this.pollTimer = this.setInterval(() => this.pollEvents(), interval);
+        // Clamp interval in code — UI limits alone are not sufficient because
+        // config can be edited directly outside the admin UI.
+        const raw = Number(this.config.pollingInterval) || 30;
+        this._pollInterval = Math.max(15, Math.min(3600, raw)) * 1000;
+
         await this.pollEvents();
     }
 
@@ -91,6 +95,9 @@ class Cctvql extends utils.Adapter {
         } catch (err) {
             this.log.debug(`Event poll failed: ${err.message}`);
             await this.setState('info.connection', false, true);
+        } finally {
+            // Self-rescheduling setTimeout prevents overlapping poll cycles.
+            this.pollTimer = this.setTimeout(() => this.pollEvents(), this._pollInterval);
         }
     }
 
@@ -101,12 +108,6 @@ class Cctvql extends utils.Adapter {
 
         if (id.endsWith('query.send') && state.val) {
             await this.sendQuery(state.val);
-        }
-
-        // PTZ: write to cameras.<id>.ptz.action triggers a PTZ command
-        const ptzMatch = id.match(/cameras\.([^.]+)\.ptz\.action$/);
-        if (ptzMatch && state.val) {
-            await this.sendPtz(ptzMatch[1], state.val);
         }
     }
 
@@ -127,24 +128,10 @@ class Cctvql extends utils.Adapter {
         }
     }
 
-    async sendPtz(cameraId, action) {
-        this.log.debug(`PTZ ${cameraId} → ${action}`);
-        try {
-            const camId = cameraId.replace(/_/g, '-');
-            await axios.post(
-                `${this.baseUrl}/cameras/${encodeURIComponent(camId)}/ptz`,
-                { action, speed: 50 },
-                { headers: this.headers, timeout: 10000 },
-            );
-        } catch (err) {
-            this.log.error(`PTZ failed: ${err.message}`);
-        }
-    }
-
     onUnload(callback) {
         try {
             if (this.pollTimer) {
-                this.clearInterval(this.pollTimer);
+                this.clearTimeout(this.pollTimer);
             }
         } finally {
             callback();
