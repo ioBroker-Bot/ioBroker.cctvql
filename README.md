@@ -73,6 +73,10 @@ on({ id: 'cctvql.0.query.answer', change: 'any' }, (obj) => {
 
 ## Changelog
 
+
+### **WORK IN PROGRESS**
+- (ioBroker-Bot) Adapter requires admin >= 7.8.23 now.
+
 ### 1.0.2 (2026-06-07)
 * Update @alcalzone/release-script* to 5.2.x (checker E0036)
 * Require Node.js >= 24; update CI deploy job to node 24 (checker E3022)

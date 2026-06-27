@@ -28,8 +28,18 @@
       "uk": "Запити до CCTV природною мовою, живі події та керування PTZ для Frigate, Hikvision, Synology, Dahua тощо.",
       "zh-cn": "针对 Frigate、Hikvision、Synology、Dahua 等的自然语言 CCTV 查询、实时事件和 PTZ 控制。"
     },
-    "authors": ["arunrajiah <arunrajiah@gmail.com>"],
-    "keywords": ["cctv", "camera", "nvr", "frigate", "hikvision", "nlp", "surveillance"],
+    "authors": [
+      "arunrajiah <arunrajiah@gmail.com>"
+    ],
+    "keywords": [
+      "cctv",
+      "camera",
+      "nvr",
+      "frigate",
+      "hikvision",
+      "nlp",
+      "surveillance"
+    ],
     "licenseInformation": {
       "license": "MIT",
       "type": "free"
@@ -45,9 +55,19 @@
     "loglevel": "info",
     "connectionType": "local",
     "dataSource": "push",
-    "dependencies": [{ "js-controller": ">=6.0.11" }],
-    "globalDependencies": [{ "admin": ">=7.6.20" }],
-    "adminUI": { "config": "json" },
+    "dependencies": [
+      {
+        "js-controller": ">=6.0.11"
+      }
+    ],
+    "globalDependencies": [
+      {
+        "admin": ">=7.8.23"
+      }
+    ],
+    "adminUI": {
+      "config": "json"
+    },
     "news": {
       "1.0.2": {
         "en": "Fix checker errors: update release-script packages, require Node.js 24, fix i18n placeholder key",
@@ -97,14 +117,20 @@
     "apiKey": "",
     "pollingInterval": 30
   },
-  "protectedNative": ["apiKey"],
-  "encryptedNative": ["apiKey"],
+  "protectedNative": [
+    "apiKey"
+  ],
+  "encryptedNative": [
+    "apiKey"
+  ],
   "objects": [],
   "instanceObjects": [
     {
       "_id": "info",
       "type": "channel",
-      "common": { "name": "Information" },
+      "common": {
+        "name": "Information"
+      },
       "native": {}
     },
     {
@@ -123,7 +149,9 @@
     {
       "_id": "query",
       "type": "channel",
-      "common": { "name": "Query" },
+      "common": {
+        "name": "Query"
+      },
       "native": {}
     },
     {
@@ -168,7 +196,9 @@
     {
       "_id": "events",
       "type": "channel",
-      "common": { "name": "Events" },
+      "common": {
+        "name": "Events"
+      },
       "native": {}
     },
     {
