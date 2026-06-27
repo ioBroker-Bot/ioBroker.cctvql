@@ -32,7 +32,7 @@
     "io-package.json"
   ],
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/.bin/jest --passWithNoTests",
