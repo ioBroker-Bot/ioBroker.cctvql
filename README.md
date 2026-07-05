@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/assets/logo.svg" alt="ioBroker.cctvql logo" width="96" height="96">
+</p>
+
 # ioBroker.cctvql
 
 ioBroker adapter for [cctvQL](https://github.com/arunrajiah/cctvql) — a natural-language query layer for CCTV systems.
