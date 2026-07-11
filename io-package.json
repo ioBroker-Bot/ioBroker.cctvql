@@ -1,7 +1,7 @@
 {
     "common": {
         "name": "cctvql",
-        "version": "1.0.3",
+        "version": "1.0.4",
         "titleLang": {
             "en": "cctvQL",
             "de": "cctvQL",
@@ -69,6 +69,19 @@
             "config": "json"
         },
         "news": {
+            "1.0.4": {
+                "en": "Fix: remove npm-token to enable OIDC trusted publishing, add README changelog entry",
+                "de": "Fix: npm-Token entfernt um OIDC Trusted Publishing zu aktivieren, README Changelog-Eintrag hinzugefügt",
+                "ru": "Исправление: удален npm-token для включения доверенной публикации OIDC, добавлена запись в README changelog",
+                "pt": "Fix: remover npm-token para habilitar publicação confiável OIDC, adicionar entrada de changelog no README",
+                "nl": "Fix: npm-token verwijderd om OIDC trusted publishing in te schakelen, README changelog-vermelding toegevoegd",
+                "fr": "Fix: suppression du npm-token pour activer la publication OIDC de confiance, ajout d'une entrée dans le changelog README",
+                "it": "Fix: rimozione npm-token per abilitare la pubblicazione OIDC affidabile, aggiunta voce changelog nel README",
+                "es": "Fix: eliminar npm-token para habilitar publicación OIDC de confianza, agregar entrada de changelog en README",
+                "pl": "Fix: usunięcie npm-token w celu włączenia zaufanego publikowania OIDC, dodanie wpisu changelog do README",
+                "uk": "Виправлення: видалено npm-token для включення довіреної публікації OIDC, додано запис до README changelog",
+                "zh-cn": "修复：删除npm-token以启用OIDC可信发布，在README中添加更新日志条目"
+            },
             "1.0.3": {
                 "en": "Fix: self-rescheduling poll loop, clamp interval in code, remove unimplemented PTZ states, require Node.js 22",
                 "de": "Fix: selbst-neuplanende Poll-Schleife, Intervall im Code begrenzen, nicht implementierte PTZ-Zustände entfernen, Node.js 22 erforderlich",
