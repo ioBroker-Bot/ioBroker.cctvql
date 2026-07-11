@@ -81,6 +81,11 @@ on({ id: 'cctvql.0.query.answer', change: 'any' }, (obj) => {
 
 ## Changelog
 
+### 1.0.4 (2026-07-11)
+* Remove npm-token from deploy step to enable OIDC trusted publishing (E3019)
+* Add v1.0.3 and v1.0.4 entries to README changelog (E6029)
+* Merge bot PRs: fix schema links, add CHANGELOG_OLD.md, optimize Dependabot config
+
 ### 1.0.3 (2026-06-27)
 * Use self-rescheduling setTimeout for poll loop to prevent overlapping cycles
 * Clamp pollingInterval in code (min 15 s, max 3600 s) independent of UI limits
