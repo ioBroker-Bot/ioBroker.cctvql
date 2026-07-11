@@ -81,6 +81,12 @@ on({ id: 'cctvql.0.query.answer', change: 'any' }, (obj) => {
 
 ## Changelog
 
+### 1.0.3 (2026-06-27)
+* Use self-rescheduling setTimeout for poll loop to prevent overlapping cycles
+* Clamp pollingInterval in code (min 15 s, max 3600 s) independent of UI limits
+* Remove unimplemented PTZ state handler
+* Require Node.js >= 22; drop Node.js 20 (EOL) from test matrix
+
 ### 1.0.2 (2026-06-07)
 * Update @alcalzone/release-script* to 5.2.x (checker E0036)
 * Require Node.js >= 24; update CI deploy job to node 24 (checker E3022)
